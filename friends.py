@@ -1,8 +1,8 @@
 import urllib.request, json, os, sys, time, re
 
 if len( sys.argv ) < 3:
-    print("python vk.py TOKEN UID [DEPTH=1]")
-    print("# TOKEN howto: https://dvmn.org/encyclopedia/qna/63/kak-poluchit-token-polzovatelja-dlja-vkontakte/")
+    print("python3 friends.py TOKEN UID [DEPTH=1]")
+    print("# TOKEN howto: https://github.com/2naive/vk-download/tree/master#readme")
     # https://oauth.vk.com/authorize?client_id=51756670&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends,photos,video&response_type=token&v=5.131&state=123456
     sys.exit()
 TOKEN = sys.argv[1]

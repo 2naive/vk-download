@@ -3,8 +3,8 @@ from datetime import datetime
 
 V = "5.131"
 if len( sys.argv ) < 2:
-    print("python photos.py TOKEN [UID]")
-    print("# TOKEN howto: https://dvmn.org/encyclopedia/qna/63/kak-poluchit-token-polzovatelja-dlja-vkontakte/")
+    print("python3 photos.py TOKEN [UID]")
+    print("# TOKEN howto: https://github.com/2naive/vk-download/tree/master#readme")
     # https://oauth.vk.com/authorize?client_id=51756670&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends,photos,video&response_type=token&v=5.131&state=123456
     sys.exit()
 
