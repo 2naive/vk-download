@@ -2,7 +2,7 @@ import urllib.request, json, os, sys, time, re
 from datetime import datetime
 
 V = "5.131"
-TYPES = ['video', 'photos', 'wall', 'messages', 'friends']
+TYPES = ['video', 'photos', 'wall', 'friends']
 DELAY = 0.25 # https://dev.vk.com/ru/api/api-requests#%D0%A7%D0%B0%D1%81%D1%82%D0%BE%D1%82%D0%BD%D1%8B%D0%B5%20%D0%BE%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%B5%D0%BD%D0%B8%D1%8F
 OFFSET_MAX = 20
 
@@ -38,9 +38,6 @@ def delete_wall(token):
 def delete_friends(token):
     delete_items(token, 'friends.get', 'friends.delete', 'user')
     delete_items(token, 'friends.getRequests', 'friends.delete', 'user')
-
-def delete_messages(token):
-    delete_items(token, 'messages.get', 'messages.delete', 'message')
 
 def delete_items(token, method_list, method_delete, item_name, offset=OFFSET_MAX):
     time.sleep(DELAY)

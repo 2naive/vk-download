@@ -6,7 +6,7 @@ DELAY = 1.01 # https://dev.vk.com/ru/api/api-requests#%D0%A7%D0%B0%D1%81%D1%82%D
 if len( sys.argv ) < 3:
     print("python3 friends.py TOKEN UID [DEPTH=1]")
     print("# TOKEN howto: https://github.com/2naive/vk-download/tree/master#readme")
-    # https://oauth.vk.com/authorize?client_id=51756670&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends,photos,video,messages,wall&response_type=token&v=5.131&state=123457
+    # https://oauth.vk.com/authorize?client_id=51756670&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends,photos,video,wall&response_type=token&v=5.131&state=123457
     sys.exit()
 TOKEN = sys.argv[1]
 UID = sys.argv[2]
