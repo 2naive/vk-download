@@ -31,7 +31,7 @@ vk1.a.J2L5cqOgD9v4lB5mkt7_LciAIFKr7yMSu518U2NRzWXuhI9KklhL1ZR_0bSDpBgsVVbj3qfJEr
 ./video.py TOKEN remixnsid remixsid [UID]  
 — Скачивает видео в наилучшем разрешении из всех альбомов, включая служебные, сохраняя в соответствующие папки.  
 
-./photos.py TOKEN [video|photos|wall|messages|friends]   
+./delete.py TOKEN [video|photos|wall|friends]   
 — Удаляет указанные типы данных поштучно и их альбомы. 
 
 ## Disclaimer
