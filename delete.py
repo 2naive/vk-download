@@ -38,6 +38,7 @@ def delete_wall(token):
 def delete_friends(token):
     delete_items(token, 'friends.get', 'friends.delete', 'user')
     delete_items(token, 'friends.getRequests', 'friends.delete', 'user')
+    delete_items(token, 'friends.deleteAllRequests', 'friends.delete', 'user')
 
 def delete_items(token, method_list, method_delete, item_name, offset=OFFSET_MAX):
     time.sleep(DELAY)
@@ -46,6 +47,9 @@ def delete_items(token, method_list, method_delete, item_name, offset=OFFSET_MAX
         if "error" in data:
             print(f"— Error @{method_list} {data['error']['error_code']}: {data['error']['error_msg']}")
             sys.exit()
+            return
+        if method_list == 'friends.deleteAllRequests':
+            print(f"All friend requests deleted")
             return
         items = data['response']['items']
         count = data['response']['count']
