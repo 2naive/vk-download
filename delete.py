@@ -39,6 +39,7 @@ def delete_friends(token):
     delete_items(token, 'friends.get', 'friends.delete', 'user')
     delete_items(token, 'friends.getRequests', 'friends.delete', 'user')
     delete_items(token, 'friends.deleteAllRequests', 'friends.delete', 'user')
+    delete_items(token, 'users.getFollowers', 'friends.delete', 'user')
 
 def delete_items(token, method_list, method_delete, item_name, offset=OFFSET_MAX):
     time.sleep(DELAY)
