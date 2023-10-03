@@ -54,13 +54,14 @@ def delete_items(token, method_list, method_delete, item_name, offset=OFFSET_MAX
         for item in items:
             i+=1
             time.sleep(DELAY)
-            with urllib.request.urlopen(f"https://api.vk.com/method/{method_delete}?access_token={token}&v={V}&{item_name}_id={item['id']}") as url:
+            item_id = item if method_delete == 'friends.delete' else item['id']
+            with urllib.request.urlopen(f"https://api.vk.com/method/{method_delete}?access_token={token}&v={V}&{item_name}_id={item_id}") as url:
                 data = json.load(url)
                 if "error" in data:
                     print(f"— Error @{method_delete} {data['error']['error_code']}: {data['error']['error_msg']}")
                     sys.exit()
                     return
-                print(f"[{i}] {item['id']}")
+                print(f"[{i}] {item_id}")
         if offset < count:
             delete_items(token, method_list, method_delete, item_name, offset)
 if len( sys.argv ) < 3:
